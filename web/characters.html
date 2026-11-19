@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>英雄图鉴 · 24 位英雄 | 荒野乱斗 · 英雄图鉴</title>
+<meta name="description" content="荒野乱斗 24 位英雄卡片：攻击方式、超级技能、上手难度与实战提醒，支持按定位筛选和按名字搜索。">
+<meta name="theme-color" content="#10142a">
+<link rel="icon" href="../image/logo-mark.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html">
+      <img src="../image/logo-mark.png" alt="" width="36" height="36">
+      <span>荒野乱斗<em>英雄图鉴</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="sr-only">打开导航菜单</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航" data-nav>
+      <ul>
+        <li><a href="../index.html">主页</a></li>
+        <li><a href="characters.html" aria-current="page">英雄图鉴</a></li>
+        <li><a href="roles.html">定位解析</a></li>
+        <li><a href="modes.html">对战模式</a></li>
+        <li><a href="progress.html">养成进阶</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="page-head">
+      <nav class="crumb" aria-label="面包屑">
+        <a href="../index.html">主页</a> / <span>英雄图鉴</span>
+      </nav>
+      <h1>英雄图鉴</h1>
+      <p class="lead">
+        24 位常见英雄，按<strong>火力输出</strong>、<strong>重装坦克</strong>、<strong>远程射手</strong>、
+        <strong>控制投掷</strong>、<strong>辅助治疗</strong>五类整理。
+        每张卡片写清攻击方式、超级技能、上手难度，以及一句最值得记住的实战提醒。
+      </p>
+    </div>
+
+    <div class="toolbar">
+      <ul class="chips" role="group" aria-label="按定位筛选">
+        <li><button class="chip" type="button" data-filter="all" aria-pressed="true">全部</button></li>
+        <li><button class="chip" type="button" data-filter="火力输出" aria-pressed="false">火力输出</button></li>
+        <li><button class="chip" type="button" data-filter="重装坦克" aria-pressed="false">重装坦克</button></li>
+        <li><button class="chip" type="button" data-filter="远程射手" aria-pressed="false">远程射手</button></li>
+        <li><button class="chip" type="button" data-filter="控制投掷" aria-pressed="false">控制投掷</button></li>
+        <li><button class="chip" type="button" data-filter="辅助治疗" aria-pressed="false">辅助治疗</button></li>
+      </ul>
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <label class="sr-only" for="brawler-search">搜索英雄</label>
+        <input id="brawler-search" type="search" placeholder="搜索中文名 / 英文名…" autocomplete="off" data-search>
+      </div>
+    </div>
+
+    <p class="result-line" aria-live="polite">
+      当前展示 <strong data-count>24</strong> 位英雄（共 24 位）
+    </p>
+
+    <ul class="brawler-grid" data-brawler-grid aria-busy="false">
+
+      <li class="brawler" data-role="火力输出" data-search="雪莉 shelly 霰弹 初始 火力输出">
+        <div class="brawler-top">
+          <img src="../image/brawlers/shelly.jpg" alt="雪莉头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">雪莉<small>Shelly</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="初始">初始</span>
+          <span class="tag">火力输出</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>近距霰弹，距离越近命中越多</dd>
+          <dt>超级技能</dt><dd>超级霰弹：击退敌人并摧毁掩体</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">用墙体把对手逼到近距离；在开阔地和远程对枪几乎没有胜算。</p>
+      </li>
+
+      <li class="brawler" data-role="火力输出" data-search="妮塔 nita 召唤 熊 稀有 火力输出">
+        <div class="brawler-top">
+          <img src="../image/brawlers/nita.jpg" alt="妮塔头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">妮塔<small>Nita</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">火力输出</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>穿透冲击波，可同时命中多个目标</dd>
+          <dt>超级技能</dt><dd>召唤熊灵，自动追击并攻击附近敌人</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">熊灵更适合用来封走位和夹击，单独追人容易被风筝。</p>
+      </li>
+
+      <li class="brawler" data-role="火力输出" data-search="卡尔 carl 十字镐 回旋 超稀有 火力输出">
+        <div class="brawler-top">
+          <img src="../image/brawlers/carl.jpg" alt="卡尔头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">卡尔<small>Carl</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="超稀有">超稀有</span>
+          <span class="tag">火力输出</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>抛出十字镐，去程与回程各造成一次伤害</dd>
+          <dt>超级技能</dt><dd>高速旋转，边移动边持续输出</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">出手后立刻转身，让十字镐的路径扫过更多人，回程伤害才是主体。</p>
+      </li>
+
+      <li class="brawler" data-role="火力输出" data-search="比比 bibi 球棒 击退 史诗 火力输出">
+        <div class="brawler-top">
+          <img src="../image/brawlers/bibi.jpg" alt="比比头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">比比<small>Bibi</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="史诗">史诗</span>
+          <span class="tag">火力输出</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>三段挥棒，第三段附带击退</dd>
+          <dt>超级技能</dt><dd>全垒打：把球击飞，击退并推开沿途敌人</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">攒满三段再上前，空挥一次就会陷入被动；击退能把对手撞出掩体。</p>
+      </li>
+
+      <li class="brawler" data-role="重装坦克" data-search="公牛 bull 霰弹 冲撞 稀有 坦克">
+        <div class="brawler-top">
+          <img src="../image/brawlers/bull.jpg" alt="公牛头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">公牛<small>Bull</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">重装坦克</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>双管霰弹，近距离爆发极高</dd>
+          <dt>超级技能</dt><dd>冲撞：撞碎掩体并把敌人顶飞</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">从草丛或侧翼绕后，直接从正面远距离推进只会被一路消耗。</p>
+      </li>
+
+      <li class="brawler" data-role="重装坦克" data-search="普里莫 primo 摔跤 跳跃 稀有 坦克">
+        <div class="brawler-top">
+          <img src="../image/brawlers/primo.jpg" alt="普里莫头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">普里莫<small>El Primo</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">重装坦克</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>四连拳，射程短但连击流畅</dd>
+          <dt>超级技能</dt><dd>飞身重压：跳向目标区域并造成范围伤害</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">用大招跳过掩体切后排，落地前就要想好撤退路线。</p>
+      </li>
+
+      <li class="brawler" data-role="重装坦克" data-search="达里尔 darryl 滚桶 霰弹 超稀有 坦克">
+        <div class="brawler-top">
+          <img src="../image/brawlers/darryl.jpg" alt="达里尔头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">达里尔<small>Darryl</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="超稀有">超稀有</span>
+          <span class="tag">重装坦克</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>双管霰弹，近距离散射伤害集中</dd>
+          <dt>超级技能</dt><dd>滚桶冲锋，撞到墙壁后会反弹</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">利用墙面反弹改变落点，直接滚进人群会被三个人同时集火。</p>
+      </li>
+
+      <li class="brawler" data-role="重装坦克" data-search="罗莎 rosa 护盾 近战 超稀有 坦克">
+        <div class="brawler-top">
+          <img src="../image/brawlers/rosa.jpg" alt="罗莎头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">罗莎<small>Rosa</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="超稀有">超稀有</span>
+          <span class="tag">重装坦克</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>三连拳，射程短但节奏稳定</dd>
+          <dt>超级技能</dt><dd>护盾：短时间内大幅降低受到的伤害</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">先开盾吃一轮伤害再进草丛，替队友挡下关键火力比自己拿人头更值。</p>
+      </li>
+
+      <li class="brawler" data-role="重装坦克" data-search="弗兰肯 frank 锤子 眩晕 史诗 坦克">
+        <div class="brawler-top">
+          <img src="../image/brawlers/frank.jpg" alt="弗兰肯头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">弗兰肯<small>Frank</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="史诗">史诗</span>
+          <span class="tag">重装坦克</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>大范围锤击，前摇明显但覆盖面广</dd>
+          <dt>超级技能</dt><dd>震地：范围内敌人被眩晕</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">先手大招开团收益最高，但一定要确认队友就在身后。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="柯尔特 colt 连射 直线 稀有 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/colt.jpg" alt="柯尔特头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">柯尔特<small>Colt</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>直线连射，弹道密集但会被墙体阻挡</dd>
+          <dt>超级技能</dt><dd>穿透弹幕，可连人带墙一起打穿</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">预判对手走位扫射，先找好没有遮挡的角度再开火。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="布洛克 brock 火箭 爆炸 稀有 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/brock.jpg" alt="布洛克头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">布洛克<small>Brock</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>单发火箭，命中区域产生爆炸</dd>
+          <dt>超级技能</dt><dd>火箭雨：封锁一片区域并拆墙</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">火箭有飞行延迟，打移动目标要提前量；弹药少，别随手浪费。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="瑞科 rico 弹射 反弹 超稀有 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/rico.jpg" alt="瑞科头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">瑞科<small>Rico</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="超稀有">超稀有</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>子弹撞墙反弹，可在狭窄地形反复弹射</dd>
+          <dt>超级技能</dt><dd>多段弹幕，同样会在墙面反弹</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> 较难</dd>
+        </dl>
+        <p class="brawler-tip">在窄道和墙角打弹射最赚，开阔地图会明显吃亏。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="佩佩 piper 狙击 距离 史诗 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/piper.jpg" alt="佩佩头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">佩佩<small>Piper</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="史诗">史诗</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>狙击弹，距离越远伤害越高</dd>
+          <dt>超级技能</dt><dd>跳跃逃脱，并在原地留下炸弹</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> 较难</dd>
+        </dl>
+        <p class="brawler-tip">保持最远射程输出；被贴脸时用大招拉开距离，而不是原地硬拼。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="斯派克 spike 仙人掌 爆炸 传奇 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/spike.jpg" alt="斯派克头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">斯派克<small>Spike</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="传奇">传奇</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>飞刺命中后向四周炸开，可隔墙蹭伤害</dd>
+          <dt>超级技能</dt><dd>荆棘领域：范围内持续伤害并减速</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> 较难</dd>
+        </dl>
+        <p class="brawler-tip">用爆炸范围打消耗；大招铺在宝石井或球门前，分割战场比直接砸人更有效。</p>
+      </li>
+
+      <li class="brawler" data-role="远程射手" data-search="乌鸦 crow 毒 飞刀 传奇 射手">
+        <div class="brawler-top">
+          <img src="../image/brawlers/crow.jpg" alt="乌鸦头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">乌鸦<small>Crow</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="传奇">传奇</span>
+          <span class="tag">远程射手</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>三连飞刀，命中后附加持续中毒</dd>
+          <dt>超级技能</dt><dd>跳跃突进，落点投掷一圈毒刃</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span> 较难</dd>
+        </dl>
+        <p class="brawler-tip">靠中毒消耗和机动性骚扰后排；自身很脆，不要当正面输出使用。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="杰西 jessie 炮台 弹射 稀有 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/jessie.jpg" alt="杰西头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">杰西<small>Jessie</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>能量球命中后弹向附近敌人</dd>
+          <dt>超级技能</dt><dd>部署炮台，自动攻击范围内目标</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">炮台放在掩体后输出，手动选择落点比随手一丢稳得多。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="爆破麦克 dynamike 炸弹 越墙 稀有 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/dynamike.jpg" alt="爆破麦克头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">爆破麦克<small>Dynamike</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>双管炸弹，可越过墙体投掷</dd>
+          <dt>超级技能</dt><dd>大炸弹：大范围爆炸并击退</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">隔墙压制近战是强项，但被贴脸几乎没有还手之力，留意身后。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="巴利 barley 酒瓶 燃烧 稀有 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/barley.jpg" alt="巴利头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">巴利<small>Barley</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>抛掷酒瓶，落地形成持续燃烧区域</dd>
+          <dt>超级技能</dt><dd>燃烧瓶雨：大范围封锁与拆墙</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">用酒瓶封住草丛和窄口，逼迫对手走进你的火力范围。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="潘妮 penny 金币 迫击炮 超稀有 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/penny.jpg" alt="潘妮头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">潘妮<small>Penny</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="超稀有">超稀有</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>金币弹射，命中后继续弹向后方目标</dd>
+          <dt>超级技能</dt><dd>部署迫击炮，可隔墙轰炸固定区域</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">迫击炮放后排持续输出，金币弹射专门惩罚站位密集的敌人。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="艾姆兹 emz 喷雾 拉人 史诗 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/emz.jpg" alt="艾姆兹头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">艾姆兹<small>Emz</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="史诗">史诗</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>扇形喷雾，中距离持续造成伤害</dd>
+          <dt>超级技能</dt><dd>生成吸附区域，把范围内敌人拉向中心</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">中距离扇形消耗很稳，大招把敌人拉进队友的火力圈才算物尽其用。</p>
+      </li>
+
+      <li class="brawler" data-role="控制投掷" data-search="塔拉 tara 黑洞 塔罗牌 神话 控制">
+        <div class="brawler-top">
+          <img src="../image/brawlers/tara.jpg" alt="塔拉头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">塔拉<small>Tara</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="神话">神话</span>
+          <span class="tag">控制投掷</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>三张塔罗牌呈扇形飞出</dd>
+          <dt>超级技能</dt><dd>黑洞：把范围内敌人吸向中心</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">大招接范围伤害是经典连招，等敌方两人以上靠近再放。</p>
+      </li>
+
+      <li class="brawler" data-role="辅助治疗" data-search="波可 poco 治疗 音波 稀有 辅助">
+        <div class="brawler-top">
+          <img src="../image/brawlers/poco.jpg" alt="波可头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">波可<small>Poco</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="稀有">稀有</span>
+          <span class="tag">辅助治疗</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>扇形音波，可穿透多个目标</dd>
+          <dt>超级技能</dt><dd>治疗范围内所有队友，同时伤害敌人</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">站在队伍中后方，让音波和治疗的覆盖范围最大化。</p>
+      </li>
+
+      <li class="brawler" data-role="辅助治疗" data-search="帕姆 pam 治疗台 奶 史诗 辅助">
+        <div class="brawler-top">
+          <img src="../image/brawlers/pam.jpg" alt="帕姆头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">帕姆<small>Pam</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="史诗">史诗</span>
+          <span class="tag">辅助治疗</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>散射弹幕，覆盖范围大、压制稳定</dd>
+          <dt>超级技能</dt><dd>治疗台：范围内队友持续回血</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i></i><i></i></span> 简单</dd>
+        </dl>
+        <p class="brawler-tip">治疗台放在掩体后，逼迫对手先来拆台，节奏就掌握在你手里。</p>
+      </li>
+
+      <li class="brawler" data-role="辅助治疗" data-search="吉恩 gene 拉人 魔法手 神话 辅助">
+        <div class="brawler-top">
+          <img src="../image/brawlers/gene.jpg" alt="吉恩头像" width="64" height="64" loading="lazy">
+          <h2 class="brawler-name">吉恩<small>Gene</small></h2>
+        </div>
+        <div class="tags">
+          <span class="tag" data-rarity="神话">神话</span>
+          <span class="tag">辅助治疗</span>
+        </div>
+        <dl>
+          <dt>攻击方式</dt><dd>魔法手，命中后把目标拉近一段距离</dd>
+          <dt>超级技能</dt><dd>长距离抓取，把敌人直接拉到自己身边</dd>
+          <dt>上手难度</dt><dd><span class="diff" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span> 中等</dd>
+        </dl>
+        <p class="brawler-tip">把敌人拉进队友的包围圈，而不是把坦克拉到自己脸上。</p>
+      </li>
+
+    </ul>
+
+    <div class="empty" data-empty>
+      <strong>没有找到匹配的英雄</strong>
+      试试换个关键词，或点“全部”重新浏览。
+    </div>
+
+    <div class="note" style="margin-top:2rem">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/>
+      </svg>
+      <p>本站的定位分类与难度评价是编辑整理，不是官方数据；具体数值与技能效果以游戏内版本为准。</p>
+    </div>
+
+    <div class="back-home">
+      <p><strong>还想先看整体思路？</strong>回到主页，从定位解析或对战模式开始也行。</p>
+      <a class="btn" href="../index.html">← 返回主页</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><img src="../image/logo-mark.png" alt="" width="32" height="32">荒野乱斗 · 英雄图鉴</p>
+        <p>一个纯静态的英雄资料站，面向刚入坑或想拓宽英雄池的玩家。内容以玩法思路为主，不追求版本的精确数值。</p>
+      </div>
+      <div>
+        <h2>站内导航</h2>
+        <ul>
+          <li><a href="characters.html">英雄图鉴</a></li>
+          <li><a href="roles.html">定位解析</a></li>
+          <li><a href="modes.html">对战模式</a></li>
+          <li><a href="progress.html">养成进阶</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>关于内容</h2>
+        <p>英雄分类与上手难度为玩家整理，具体数值请以游戏内为准。</p>
+        <p><a href="../index.html">← 返回主页</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> 荒野乱斗 · 英雄图鉴</span>
+      <span>非官方粉丝作品，与 Supercell 无关；游戏内容与数值请以游戏内为准。</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
